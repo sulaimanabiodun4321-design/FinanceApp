@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f4ef">
+    <meta name="description" content="A quiet little dashboard for the time, wherever you are.">
+    <title>Right Now — A little time for yourself</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="topbar">
+        <a class="wordmark" href="#" aria-label="Right Now home">
+          <span class="wordmark-icon" aria-hidden="true"></span>
+          RIGHT NOW
+        </a>
+        <div class="live-label"><span class="live-dot"></span> YOUR MOMENT, LIVE</div>
+      </header>
+
+      <section class="hero" aria-labelledby="greeting">
+        <div class="hero-copy">
+          <p class="eyebrow">A SMALL PAUSE IN A BIG WORLD</p>
+          <h1 id="greeting">Hello,<br><span>right now.</span></h1>
+          <p class="intro">Wherever you are, this is your little corner of time.</p>
+        </div>
+
+        <div class="clock-card" aria-label="Your local time">
+          <div class="clock-card-top">
+            <span class="location"><span class="location-mark" aria-hidden="true">↗</span> YOUR LOCAL TIME</span>
+            <span class="timezone" id="timezone">LOCAL</span>
+          </div>
+          <div class="time" id="local-time" aria-live="off">17:18<span class="seconds">:53</span></div>
+          <div class="date-row">
+            <span id="local-date">Saturday, October 10, 2026</span>
+            <span class="sun-mark" aria-hidden="true">☼</span>
+          </div>
+          <div class="day-progress">
+            <div class="progress-label"><span>THE DAY, SO FAR</span><span id="progress-value">71%</span></div>
+            <div class="progress-track" role="progressbar" aria-label="Day progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="71">
+              <span id="progress-bar"></span>
+            </div>
+            <div class="progress-endpoints"><span>12 AM</span><span>11:59 PM</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="world-section" aria-labelledby="world-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">SAME MOMENT, DIFFERENT PLACES</p>
+            <h2 id="world-heading">Around the world<span class="heading-period">.</span></h2>
+          </div>
+          <span class="section-note">A few familiar corners of the map</span>
+        </div>
+        <div class="city-grid">
+          <article class="city-card">
+            <div class="city-top"><span class="city-indicator"></span><span class="city-country">UNITED KINGDOM</span></div>
+            <h3>London</h3>
+            <p class="city-time" data-zone="Europe/London">12:18<span>:53</span></p>
+            <p class="city-date" data-date-zone="Europe/London">Saturday, October 10</p>
+          </article>
+          <article class="city-card">
+            <div class="city-top"><span class="city-indicator"></span><span class="city-country">UNITED STATES</span></div>
+            <h3>New York</h3>
+            <p class="city-time" data-zone="America/New_York">12:18<span>:53</span></p>
+            <p class="city-date" data-date-zone="America/New_York">Saturday, October 10</p>
+          </article>
+          <article class="city-card">
+            <div class="city-top"><span class="city-indicator"></span><span class="city-country">JAPAN</span></div>
+            <h3>Tokyo</h3>
+            <p class="city-time" data-zone="Asia/Tokyo">12:18<span>:53</span></p>
+            <p class="city-date" data-date-zone="Asia/Tokyo">Saturday, October 10</p>
+          </article>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>TAKE A BREATH. YOU’RE HERE.</span>
+        <span id="year-note">MADE FOR THE PRESENT · 2026</span>
+      </footer>
+    </main>
+  </body>
+</html>
